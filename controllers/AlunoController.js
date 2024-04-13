@@ -2,7 +2,17 @@ const { json } = require("express");
 const Aluno = require("../models/Aluno")
 
 const AlunoController = {
-    getAll: async (req, res) => {
+    getAll: async (req, res, situacao = '') => {
+
+        // let where = {}
+        // switch (situacao){
+        //     case "aprovados": where = {media: {$gte: 7}}; break;
+        //     case "reprovados": where = {media: {$lt: 5}}; break;
+        //     case "recuperacao": where = {media: {$gte: 5, $lt: 7}}; break;
+        // }
+
+        // res.json(await Aluno.find(where))
+
         res.json(await Aluno.find())
     },
     getAprovados: async (req, res) => {
