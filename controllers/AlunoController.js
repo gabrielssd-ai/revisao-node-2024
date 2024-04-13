@@ -5,6 +5,15 @@ const AlunoController = {
     getAll: async (req, res) => {
         res.json(await Aluno.find())
     },
+    getAprovados: async (req, res) => {
+        res.json(await Aluno.find( {media: {$gte: 7}} ))
+    },
+    getReprovados: async (req, res) => {
+        res.json(await Aluno.find( {media: {$lt: 5}} ))
+    },
+    getRecuperacao: async (req, res) => {
+        res.json(await Aluno.find( {media: {$gte: 5, $lt: 7}} ))
+    },
     get: async (req, res) => {
         try {
             res.json(await Aluno.findById(req.params.id))
@@ -20,6 +29,11 @@ const AlunoController = {
             const alunos = req.body
             
             for(let n of notas){
+                if( n < 0 || n > 10){
+                    return res.status(400).json(
+                        {message: 'Não pode haver nota menor que 0 ou maior que 10'}
+                    )
+                }
                 soma += n
             }
 
