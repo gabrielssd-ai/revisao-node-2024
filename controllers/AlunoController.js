@@ -57,14 +57,14 @@ const AlunoController = {
     },
     update: async (req, res) => {
         try {
-            res.json(await Aluno.findByIdAndUpdate(req.params.id, req.body))
+            res.json(await Aluno.updateMany( {turma: "E"}, {turma: "B"} ))
         } catch (error) {
             res.status(404).json({error: 'Registro não encontrado'})
         }
     },
     delete: async (req, res) => {
         try {
-            res.json(await Aluno.findByIdAndDelete(req.params.id))
+            res.json(await Aluno.deleteMany({nome: "Teste"}))
         } catch (error) {
             res.status(404).json({error: 'Registro não encontrado'})
         }
