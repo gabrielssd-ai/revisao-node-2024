@@ -19,7 +19,8 @@ router.get('/alunos/recuperacao', (req, res) => AlunoController.getRecuperacao(r
 
 router.delete('/alunos', (req, res) => AlunoController.delete(req, res))
 router.put('/alunos', (req, res) => AlunoController.update(req, res))
-
+// // router.put('/Cargo/:id', (req, res) => CargoController.update(req, res))
+// // router.delete('/Cargo/:id', (req, res) => CargoController.delete(req, res))
 
 
 

@@ -63,3 +63,38 @@ const AlunoController = {
 }
 
 module.exports = AlunoController
+// //{
+//     "filtro": { "turma": "E" },
+//     "atualizacao": { "turma": "B" }
+// }
+
+// {
+//     "method": "DELETE",
+//     "url": "http://localhost:3000/alunos",
+//     "headers": {
+//         "Content-Type": "application/json"
+//     },
+//     "body": {
+//         "nome": "Teste"
+//     }
+// }
+
+// {
+//     "filtro": { "nome": "gabriel", "turma": "E" },
+//     "atualizacao": { "turma": "B" }
+// }
+
+// update: async (req, res) => {
+//     try {
+//         res.json(await Funcionario.findByIdAndUpdate(req.params.id, req.body))
+//     } catch (error) {
+//         res.status(404).json({error: 'Registro não encontrado'})
+//     }
+// },
+// delete: async (req, res) => {
+//     try {
+//         res.json(await Funcionario.findByIdAndDelete(req.params.id))
+//     } catch (error) {
+//         res.status(404).json({error: 'Registro não encontrado'})
+//     }
+// },
