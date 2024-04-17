@@ -98,3 +98,5 @@ module.exports = AlunoController
 //         res.status(404).json({error: 'Registro não encontrado'})
 //     }
 // },
+
+// mongodb+srv://gdamaceno2018:<password>@cluster0.zdshwfo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
